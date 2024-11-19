@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Felipe Pardo" />
+    <meta
+      name="description"
+      content="Top 250 IMDB movie list with search, rating and genre filter"
+    />
+    <title>Movie App</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav
+      class="d-flex justify-space-between align-center ph-4 pw-6 sticky-top bg-c-ash z-index-1"
+    >
+      <h1 class="heading-1">Movie App</h1>
+      <div class="filters d-flex gap-2">
+        <input
+          class="search pw-4 fs-3 filter-item-border focus-visible-outline-none"
+          type="search"
+          placeholder="Search a Movie | Director | Actor |"
+        />
+        <select
+          class="p-1 fs-3 filter-item-border focus-visible-outline-none"
+          id="rating-select"
+        >
+          <option value="0">Rating</option>
+          <option value="5">5 and above</option>
+          <option value="6">6 and above</option>
+          <option value="7">7 and above</option>
+          <option value="8">8 and above</option>
+        </select>
+        <select
+          class="p-1 fs-3 filter-item-border focus-visible-outline-none"
+          name="genre"
+          id="genre-select"
+        ></select>
+      </div>
+    </nav>
+    <main id="movie-container" class="ph-4 pw-6 d-flex flex-wrap gap-5"></main>
+    <script type="module" src="./index.js"></script>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+  </body>
+</html>
